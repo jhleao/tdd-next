@@ -1,0 +1,27 @@
+{
+  "presets": [
+    "next/babel"
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        ["babel-plugin-styled-components", { "ssr": false, "displayName": false }]
+      ]
+    }
+  },
+  "plugins": [
+    ["module-resolver", {
+      "alias": {
+        "@pages": "./src/pages",
+        "@views": "./src/views",
+        "@api": "./src/api",
+        "@contexts": "./src/contexts",
+        "@components": "./src/components",
+        "@ts": "./src/@types",
+        "@tests": "./src/tests",
+        "@src": "./src"
+      }
+    }],
+    ["babel-plugin-styled-components", { "ssr": true, "displayName": true }]
+  ]
+}
